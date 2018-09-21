@@ -1,0 +1,39 @@
+
+<resources>
+    <!-- Height of each list item -->
+    <dimen name="list_item_height">88dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="activity_margin">16dp</dimen>
+
+    <!--Album List -->
+    <dimen name="elevation">4dp</dimen>
+    <dimen name="cardView_cornerRadius">10dp</dimen>
+    <dimen name="padding_albumTitleTop">8dp</dimen>
+    <dimen name="padding_albumTitleLeft">16dp</dimen>
+    <dimen name="padding_albumArtistLeft">16dp</dimen>
+
+    <dimen name="recycler_view_left_offset">9dp</dimen>
+    <dimen name="left_offset">61dp</dimen>
+    <dimen name="card_width">148dp</dimen>
+
+    <!--ListView -->
+    <dimen name="listView_marginTop">100dp</dimen>
+    <dimen name="listView_marginBottom">50dp</dimen>
+
+    <!--GridView -->
+    <dimen name="gridView_marginTop">50dp</dimen>
+    <dimen name="gridView_marginBottom">50dp</dimen>
+    <dimen name="verticalSpacing">10dp</dimen>
+    <dimen name="horizontalSpacing">5dp</dimen>
+    <dimen name="columnWidth">90dp</dimen>
+    <dimen name="numColumns">2</dimen>
+
+    <!--Now Playing-->
+    <dimen name="nowPlaying_marginTop">50dp</dimen>
+    <dimen name="nowPlaying_marginLeft">20dp</dimen>
+    <dimen name="nowPlaying_marginRight">20dp</dimen>
+
+
+</resources>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:colorBackground">@android:color/white</item>
+
+        <item name="android:windowContentTransitions">false</item>
+        <item name="android:windowSharedElementExitTransition">@android:transition/no_transition</item>
+    </style>
+
+    <style name="TemperatureTextView">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/temperature_text</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="PlaceTextView">
+        <item name="android:textSize">24sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="ClockTextView">
+        <item name="android:textSize">15sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="DescriptionTextView">
+        <item name="android:textSize">15sp</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="MyCustomTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">#fff</item>
+    </style>
+
+    <!--   Places CardView Style  -->
+    <style name="AlbumListCardView">
+        <item name="android:elevation">@dimen/elevation</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:background">@color/colorBlack</item>
+    </style>
+
+    <!--   GridView Style  -->
+    <style name="GridViewTemplate">
+        <item name="android:verticalSpacing">@dimen/verticalSpacing</item>
+        <item name="android:horizontalSpacing">@dimen/horizontalSpacing</item>
+        <item name="android:gravity">center</item>
+    </style>
+</resources>

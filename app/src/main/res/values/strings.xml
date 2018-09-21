@@ -1,3 +1,46 @@
 <resources>
     <string name="app_name">Tour Guide App</string>
+
+    <!--Artist name-->
+    <string name="nathaniel_bassey">Nathaniel Bassey</string>
+    <string name="james_Fortune">James Fortune</string>
+
+    <!--Song title-->
+    <string name="the_son_of_God">The Son of God</string>
+    <string name="all_for_me">All For Me</string>
+    <string name="live_through_it">Live Through it</string>
+    <string name="I_believe">I believe</string>
+    <string name="the_son_of_God1">The Son of God</string>
+    <string name="the_son_of_God2">The Son of God</string>
+
+    <string name="searchMenu">Search</string>
+    <string name="settingsMenu">Settings</string>
+    <string name="current_track_s_image">Current Track\'s Image</string>
+    <string name="recently_added">Recently added</string>
+    <string name="most_played">Most played</string>
+    <string name="recently_played">Recently played</string>
+    <string name="favouritesImage">Favourites Image</string>
+    <string name="favourites">Favourites</string>
+    <string name="create_playlist">CREATE PLAYLIST</string>
+    <string name="playlist_icon">playList icon</string>
+    <string name="plans_image">Plans image</string>
+    <string name="albumLabel">Album</string>
+    <string name="favouritesLabel">Favourites</string>
+    <string name="artistLabel">Artist</string>
+    <string name="playListLabel">Playlist</string>
+    <string name="nowPlayingLabel">Now Playing</string>
+
+    <string name="text1">It protects an area of rainforest, home to endangered mammals such as forest elephants, bongo antelopes and primates…</string>
+    <string name="text2">The Kwame Nkrumah Mausoleum and memorial park is located in downtown Accra, the capital of Ghana. It is dedicated to the prominent Ghanaian leader Kwame Nkrumah.</string>
+    <string name="text3"> It was the first trading post built on the Gulf of Guinea, so is the oldest European building in existence south of the Sahara.</string>
+    <string name="text4">Mole National Park protects an area of savannah and forest in northern Ghana. It’s home to elephants, leopards and rare birds such as the white-backed vulture…</string>
+    <string name="text5">It is one of about forty "slave castles", or large commercial forts, built on the Gold Coast of West Africa by European traders…</string>
+
+    <string name="KN_Park">Kakum National Park</string>
+    <string name="KN_Mausoleum">Kwame Nkrumah Mausoleum</string>
+    <string name="Elmina_Castle">Elmina Castle</string>
+    <string name="MN_Park">Mole National Park</string>
+    <string name="CapeCoast_Castle">Cape Coast Castle</string>
+
+    
 </resources>
