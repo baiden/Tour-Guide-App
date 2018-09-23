@@ -23,6 +23,7 @@ public class TourPlacesActivity extends FragmentActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        //Gets the screen's view to fullscreen
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_tour_places);
 
@@ -51,6 +52,7 @@ public class TourPlacesActivity extends FragmentActivity {
 
         ButterKnife.bind(this);
 
+        //Sets an onClickListener to the upButton created to return to the main activity
         upButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

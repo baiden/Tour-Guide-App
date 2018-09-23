@@ -28,8 +28,8 @@ import butterknife.ButterKnife;
  * A simple {@link Fragment} subclass.
  */
 public class DetailedManMadePlaceFragment extends Fragment {
-    @BindView(R.id.nameOfPlace_text_view) TextView songName;
-    @BindView(R.id.singlePlaceImage) ImageView albumImage;
+    @BindView(R.id.nameOfPlace_text_view) TextView nameOfPlace_text_view;
+    @BindView(R.id.singlePlaceImage) ImageView imageOfPlace_image_view;
     @BindView(R.id.back_button) ImageButton upButton;
 
     public DetailedManMadePlaceFragment() {
@@ -51,8 +51,8 @@ public class DetailedManMadePlaceFragment extends Fragment {
                 String receiveSongTitle = intentThatStartedThisActivity.getStringExtra("NameOfPlace");
                 int receiveAlbumImageArt = intentThatStartedThisActivity.getIntExtra("ImageOfPlace", R.id.singlePlaceImage);
 
-                songName.setText(receiveSongTitle);
-                albumImage.setImageResource(receiveAlbumImageArt);
+                nameOfPlace_text_view.setText(receiveSongTitle);
+                imageOfPlace_image_view.setImageResource(receiveAlbumImageArt);
             }
         }
 
@@ -63,7 +63,7 @@ public class DetailedManMadePlaceFragment extends Fragment {
 
         DescriptionOfPlaceAdapter descriptionOfPlaceAdapter = new DescriptionOfPlaceAdapter(getActivity(), descriptionOfPlaceData); //Puts the values into the AlbumAdapter class
         ListView listView = (ListView) rootView.findViewById(R.id.list);
-        listView.setAdapter(descriptionOfPlaceAdapter); //Displays the data in the AlbumAdapter
+        listView.setAdapter(descriptionOfPlaceAdapter); //Displays the data in the DescriptionOfPlaceAdapter
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -72,6 +72,7 @@ public class DetailedManMadePlaceFragment extends Fragment {
             }
         });
 
+        //Sets an onClickListener to the upButton created to return to the tour places activity
         upButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

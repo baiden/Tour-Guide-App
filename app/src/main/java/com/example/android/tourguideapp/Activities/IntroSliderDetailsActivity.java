@@ -26,6 +26,7 @@ public class IntroSliderDetailsActivity extends AppCompatActivity implements Dec
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        //Sets the view to fullscreen
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_details);
 
@@ -38,6 +39,7 @@ public class IntroSliderDetailsActivity extends AppCompatActivity implements Dec
         imageView = (ImageView) findViewById(R.id.image);
         imageView.setImageResource(smallResId);
 
+        //Creates a click listener on the images
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -48,6 +50,8 @@ public class IntroSliderDetailsActivity extends AppCompatActivity implements Dec
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
             loadFullSizeBitmap(smallResId);
         } else {
+
+            //Adds a small transition effect to the card views
             getWindow().getSharedElementEnterTransition().addListener(new Transition.TransitionListener() {
 
                 private boolean isClosing = false;
@@ -103,6 +107,10 @@ public class IntroSliderDetailsActivity extends AppCompatActivity implements Dec
         ObjectAnimator.ofFloat(cardView, "radius", 0f).setDuration(50).start();
     }
 
+    /**
+     * Zooms the images of the activate cardview to fill the screen when clicked
+     * @param smallResId is the ID of the unzoomed image or the smaller size of the image
+     */
     private void loadFullSizeBitmap(int smallResId) {
         int bigResId;
         switch (smallResId) {

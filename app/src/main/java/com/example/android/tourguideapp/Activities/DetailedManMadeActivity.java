@@ -13,9 +13,12 @@ public class DetailedManMadeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        //Sets the view to fullscreen
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_side_of_attractions);
 
+        //Hosts the DetailedManMadePlaceFragment
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.container, new DetailedManMadePlaceFragment())
                 .commit();

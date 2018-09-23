@@ -14,10 +14,18 @@ public class PlaceData {
         imageOfPlaceResourceID = inputImageOfPlace;
     }
 
+    /**
+     * Gets the name of the place
+     * @return the name of the place
+     */
     public String getNameOfPlace() {
         return nameOfPlace;
     }
 
+    /**
+     * Gets the image resource ID of the place
+     * @return the image resource ID of the place
+     */
     public int getImageOfPlaceResourceID() {
         return imageOfPlaceResourceID;
     }

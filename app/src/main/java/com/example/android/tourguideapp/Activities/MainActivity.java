@@ -41,10 +41,12 @@ import butterknife.OnClick;
 public class MainActivity extends AppCompatActivity {
 
     private final int[][] dotCoords = new int[5][2];
+
+    //Stores the pics of the places, maps, place descriptions, towns, tour sites, temperatures and times as arrays
     private final int[] pics = {R.drawable.kakum, R.drawable.kwame_nkrumah, R.drawable.elmina_castle, R.drawable.mole_national_park, R.drawable.cape_coast_castle};
     private final int[] maps = {R.drawable.map_paris, R.drawable.map_seoul, R.drawable.map_london, R.drawable.map_beijing, R.drawable.map_greece};
     private final int[] descriptions = {R.string.description_Of_KN_Park, R.string.description_Of_KN_Mausoleum, R.string.description_Of_Elmina_Castle, R.string.description_Of_MN_Park, R.string.description_Of_CapeCoast_Castle};
-    private final String[] countries = {"CAPE COAST", "ACCRA", "ELMINA", "TAMALE", "CAPE COAST"};
+    private final String[] towns = {"CAPE COAST", "ACCRA", "ELMINA", "TAMALE", "CAPE COAST"};
     private final String[] places = {"Kakum National Park", "Kwame Nkrumah Mausoleum", "Elmina Castle", "Mole National Park", "Cape Coast Castle"};
     private final String[] temperatures = {"21°C", "19°C", "17°C", "23°C", "20°C"};
     private final String[] times = {"Aug 1 - Dec 15    7:00-18:00", "Sep 5 - Nov 10    8:00-16:00", "Mar 8 - May 21    7:00-18:00"};
@@ -114,6 +116,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //Method for initiating the switches when a click listener event is triggered
     private void initSwitchers() {
         temperatureSwitcher = (TextSwitcher) findViewById(R.id.ts_temperature);
         temperatureSwitcher.setFactory(new TextViewFactory(R.style.TemperatureTextView, true));
@@ -157,7 +160,7 @@ public class MainActivity extends AppCompatActivity {
 
         country1TextView.setX(countryOffset1);
         country2TextView.setX(countryOffset2);
-        country1TextView.setText(countries[0]);
+        country1TextView.setText(towns[0]);
         country2TextView.setAlpha(0f);
 
         country1TextView.setTypeface(Typeface.createFromAsset(getAssets(), "open-sans-extrabold.ttf"));
@@ -246,7 +249,7 @@ public class MainActivity extends AppCompatActivity {
             animV[1] = R.anim.slide_out_top;
         }
 
-        setCountryText(countries[pos % countries.length], left2right);
+        setCountryText(towns[pos % towns.length], left2right);
 
         temperatureSwitcher.setInAnimation(MainActivity.this, animH[0]);
         temperatureSwitcher.setOutAnimation(MainActivity.this, animH[1]);
@@ -342,6 +345,7 @@ public class MainActivity extends AppCompatActivity {
                 return;
             }
 
+            //Causes the app to zoom the clicked images to fill the screen
             final int clickedPosition = recyclerView.getChildAdapterPosition(view);
             if (clickedPosition == activeCardPosition) {
 
@@ -365,6 +369,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //Creates an onClickListener listener on the button which opens the TourPlacesActivity class.
     @OnClick (R.id.popmenu)
     public void openTourPlaces(View view){
         Intent tourPlaces = new Intent(MainActivity.this, TourPlacesActivity.class);

@@ -1,7 +1,6 @@
 package com.example.android.tourguideapp.Data;
 
 public class DescriptionOfPlaceData {
-    private String descriptionOfThePlace; //Store the description of the place
     private int descriptionOfThePlaceImageResourceID; // Stores the side attraction's image ID
 
     /**
@@ -12,6 +11,10 @@ public class DescriptionOfPlaceData {
         descriptionOfThePlaceImageResourceID = InputDescriptionOfThePlaceImageResourceID;
     }
 
+    /**
+     *  * Get the image resource ID
+     * @return the image resource ID
+     */
     public int getImageOfPlaceResourceID() {
         return descriptionOfThePlaceImageResourceID;
     }

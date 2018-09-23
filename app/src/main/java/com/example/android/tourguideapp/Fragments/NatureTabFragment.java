@@ -41,10 +41,14 @@ public class NatureTabFragment extends Fragment {
         tourSideAttractionData.add(new PlaceData("Shai Hills Resource Reserve", R.drawable.shai_hills));
         tourSideAttractionData.add(new PlaceData("Mountain Afadjato", R.drawable.mount_afadjato));
 
-        TourSideAttractionAdapter tourSideAttractionAdapter = new TourSideAttractionAdapter(getActivity(), tourSideAttractionData); //Puts the values into the AlbumAdapter class
+        //Puts the values into the TourSideAttractionAdapter class
+        TourSideAttractionAdapter tourSideAttractionAdapter = new TourSideAttractionAdapter(getActivity(), tourSideAttractionData);
         GridView gridView = (GridView) rootView.findViewById(R.id.typeOfSideAttractionGridview);
-        gridView.setAdapter(tourSideAttractionAdapter); //Displays the data in the AlbumAdapter
 
+        //Displays the data in the TourSideAttractionAdapter
+        gridView.setAdapter(tourSideAttractionAdapter);
+
+        //Passes the name and image id of the current position to DetailedManMadeActivity
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

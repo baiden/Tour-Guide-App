@@ -33,15 +33,24 @@ import com.example.android.tourguideapp.R;
  */
 public class SimpleFragmentPagerAdapter extends FragmentPagerAdapter {
 
+    //Determines the number of tabs to be created
     final int PAGE_COUNT = 2;
+
+    //Stores the titles of the strings in an array
     private String tabTitles[] = new String[] { "Man-made", "Nature"};
     private Context context;
 
+    /**
+     * Creates a constructor class of the SimpleFragmentPagerAdaper
+     * @param fm is used to control the behaviour of the fragment
+     * @param context is used to specify where the fragment is to be hosted
+     */
     public SimpleFragmentPagerAdapter(FragmentManager fm, Context context) {
         super(fm);
         this.context = context;
     }
 
+    //Specifies which fragment appears first as tab 1 or not
     @Override
     public Fragment getItem(int position) {
         if (position == 0) {
@@ -53,11 +62,13 @@ public class SimpleFragmentPagerAdapter extends FragmentPagerAdapter {
         }
     }
 
+    //Gets the number of tabs to be created
     @Override
     public int getCount() {
         return PAGE_COUNT;
     }
 
+    //Makes both the title and the icons to appear on the tabs
     @Override
     public CharSequence getPageTitle(int position) {
         // Generate title based on item position
