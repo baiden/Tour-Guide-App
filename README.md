@@ -10,3 +10,7 @@ Create a Tour Guide App which presents relevant information to a user who’s vi
 
 **Android Tags:** *#linearlayout* *#relativelayout* *#imageview* *#textview* *#animation* *#gridview* *#listview* *#customadapter*
 
+**Source of the CardSlider:** https://github.com/Ramotion/cardslider-android
+
+**Apk:** https://drive.google.com/open?id=1NDtsrYBx8dkf-moBpRPMXLumeFwEp7NY
+
