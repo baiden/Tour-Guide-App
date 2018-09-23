@@ -8,16 +8,14 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.android.tourguideapp.Data.TourSideAttractionData;
+import com.example.android.tourguideapp.Data.PlaceData;
 import com.example.android.tourguideapp.R;
 
 import java.util.ArrayList;
 
-import butterknife.BindView;
+public class TourSideAttractionAdapter extends ArrayAdapter<PlaceData> {
 
-public class TourSideAttractionAdapter extends ArrayAdapter<TourSideAttractionData> {
-
-    public TourSideAttractionAdapter(Activity context, ArrayList<TourSideAttractionData> ptourSideAttractionData) {
+    public TourSideAttractionAdapter(Activity context, ArrayList<PlaceData> ptourSideAttractionData) {
         super(context, 0, ptourSideAttractionData);
     }
 
@@ -28,16 +26,16 @@ public class TourSideAttractionAdapter extends ArrayAdapter<TourSideAttractionDa
 
         if (tourAttractionListView == null) {
             tourAttractionListView = LayoutInflater.from(getContext()).inflate(
-                    R.layout.tour_side_attractions_item, parent, false);
+                    R.layout.tour_places_item, parent, false);
         }
 
-        TourSideAttractionData currentTourAttraction = getItem(position);
+        PlaceData currentTourAttraction = getItem(position);
 
-        TextView typeOfSideAttraction_text_view = (TextView) tourAttractionListView.findViewById(R.id.typeOfAttractionTxt);
-        typeOfSideAttraction_text_view.setText(currentTourAttraction.getTypeOfSideAttraction());
+        TextView typeOfSideAttraction_text_view = (TextView) tourAttractionListView.findViewById(R.id.nameOfPlace_text_view);
+        typeOfSideAttraction_text_view.setText(currentTourAttraction.getNameOfPlace());
 
-        ImageView typeOfSideAttraction_img = (ImageView) tourAttractionListView.findViewById(R.id.typeOfSideAttractionImage);
-        typeOfSideAttraction_img.setImageResource(currentTourAttraction.getSideAttractionImageResourceID());
+        ImageView typeOfSideAttraction_img = (ImageView) tourAttractionListView.findViewById(R.id.imageOfPlace_image_view);
+        typeOfSideAttraction_img.setImageResource(currentTourAttraction.getImageOfPlaceResourceID());
 
         return tourAttractionListView;
 

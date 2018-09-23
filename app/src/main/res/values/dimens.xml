@@ -6,21 +6,73 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="activity_margin">16dp</dimen>
-
-    <!--Album List -->
     <dimen name="elevation">4dp</dimen>
-    <dimen name="cardView_cornerRadius">10dp</dimen>
-    <dimen name="padding_albumTitleTop">8dp</dimen>
-    <dimen name="padding_albumTitleLeft">16dp</dimen>
-    <dimen name="padding_albumArtistLeft">16dp</dimen>
 
+    <!--Main Activity-->
+        <!--explore layout-->
+        <dimen name="explore_layout_top">50dp</dimen>
+        <!--button-->
+        <dimen name="explore_button">50dp</dimen>
+        <dimen name="explore_label_marginLeft">8dp</dimen>
+
+        <!--relative layout-->
+        <dimen name="relative_layout_height">38dp</dimen>
+        <dimen name="country_text_size">28sp</dimen>
+
+        <!--recycler_view-->
+        <dimen name="recycler_view_height">210dp</dimen>
+        <dimen name="recycler_view_marginTop">18dp</dimen>
+
+        <!--image_view-->
+        <dimen name="image_dimens">13dp</dimen>
+        <dimen name="image_marginLeft">30dp</dimen>
+
+
+    <!--Tour Places Activity-->
+        <!--image view-->
+        <dimen name="image_view_height">200dp</dimen>
+
+        <!--up button-->
+        <dimen name="upButton_marginTop">70dp</dimen>
+
+
+    <!-- Man_made and Nature Fragment-->
+        <!--rating bar-->
+        <dimen name="rating_bar_height">20dp</dimen>
+        <dimen name="rating_marginTop">180dp</dimen>
+
+        <!--image_view-->
+        <dimen name="image_marginTop">30dp</dimen>
+
+        <!--text view-->
+        <dimen name="text_size">18sp</dimen>
+        <dimen name="text_padding">10dp</dimen>
+
+
+    <!--Detailed Information of Place-->
+        <!--image view-->
+        <dimen name="image_dimens_info">50dp</dimen>
+
+        <!--get adventurous text view-->
+        <dimen name="rtext_marginTop">8dp</dimen>
+        <dimen name="rbutton_text_size">12sp</dimen>
+
+        <!--card view-->
+        <dimen name="card_view">150dp</dimen>
+        <dimen name="card_view_marginLeft">24dp</dimen>
+        <dimen name="card_view_image_view_dimens">100dp</dimen>
+        <dimen name="card_view_text_view_marginBottom">10dp</dimen>
+
+
+    <!--List of Tour Places-->
+    <dimen name="tour_card_view_text_view_marginTop">8dp</dimen>
+    <dimen name="tour_card_view_text_view_marginBottom">5dp</dimen>
+
+    <!--Card View -->
+    <dimen name="cardView_cornerRadius">10dp</dimen>
     <dimen name="recycler_view_left_offset">9dp</dimen>
     <dimen name="left_offset">61dp</dimen>
     <dimen name="card_width">148dp</dimen>
-
-    <!--ListView -->
-    <dimen name="listView_marginTop">100dp</dimen>
-    <dimen name="listView_marginBottom">50dp</dimen>
 
     <!--GridView -->
     <dimen name="gridView_marginTop">50dp</dimen>
@@ -28,12 +80,5 @@
     <dimen name="verticalSpacing">10dp</dimen>
     <dimen name="horizontalSpacing">5dp</dimen>
     <dimen name="columnWidth">90dp</dimen>
-    <dimen name="numColumns">2</dimen>
-
-    <!--Now Playing-->
-    <dimen name="nowPlaying_marginTop">50dp</dimen>
-    <dimen name="nowPlaying_marginLeft">20dp</dimen>
-    <dimen name="nowPlaying_marginRight">20dp</dimen>
-
 
 </resources>

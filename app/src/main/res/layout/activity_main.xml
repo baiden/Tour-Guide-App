@@ -11,28 +11,28 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="@dimen/explore_layout_top"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/popmenu"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="@dimen/explore_button"
+            android:layout_height="@dimen/explore_button"
             android:background="@drawable/binoculars"
             android:elevation="@dimen/elevation"
-            android:layout_marginLeft="16dp" />
+            android:layout_marginLeft="@dimen/activity_horizontal_margin" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Explore"
+            android:text="@string/explore"
             android:textStyle="bold"
-            android:layout_marginLeft="8dp"/>
+            android:layout_marginLeft="@dimen/explore_label_marginLeft"/>
     </LinearLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="38dp">
+        android:layout_height="@dimen/relative_layout_height">
 
         <FrameLayout
             android:id="@+id/countries"
@@ -47,14 +47,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:textSize="28sp"
+                android:textSize="@dimen/country_text_size"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tv_country_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="28sp"
+                android:textSize="@dimen/country_text_size"
                 android:textStyle="bold"
                 android:layout_gravity="center_vertical"/>
 
@@ -81,8 +81,8 @@
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="210dp"
-        android:layout_marginTop="18dp"
+        android:layout_height="@dimen/recycler_view_height"
+        android:layout_marginTop="@dimen/recycler_view_marginTop"
         android:layout_marginLeft="@dimen/recycler_view_left_offset"
         android:clipChildren="false"
         android:overScrollMode="never"
@@ -95,10 +95,10 @@
         android:layout_marginTop="15dp">
 
         <ImageView
-            android:layout_width="13dp"
-            android:layout_height="13dp"
+            android:layout_width="@dimen/image_dimens"
+            android:layout_height="@dimen/image_dimens"
             android:layout_gravity="center_vertical"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="@dimen/image_marginLeft"
             android:src="@drawable/star"
             android:scaleType="fitCenter"
             android:adjustViewBounds="true"/>
@@ -149,10 +149,10 @@
             android:layout_below="@id/ts_description">
 
             <ImageView
-                android:layout_width="13dp"
-                android:layout_height="13dp"
+                android:layout_width="@dimen/image_dimens"
+                android:layout_height="@dimen/image_dimens"
                 android:layout_gravity="center_vertical"
-                android:layout_marginLeft="30dp"
+                android:layout_marginLeft="@dimen/image_marginLeft"
                 android:src="@drawable/clock"
                 android:scaleType="fitCenter"/>
 

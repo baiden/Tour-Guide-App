@@ -24,7 +24,6 @@ import android.widget.ImageSwitcher;
 import android.widget.ImageView;
 import android.widget.TextSwitcher;
 import android.widget.TextView;
-import android.widget.Toast;
 import android.widget.ViewSwitcher;
 
 import com.example.android.tourguideapp.R;
@@ -44,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
     private final int[][] dotCoords = new int[5][2];
     private final int[] pics = {R.drawable.kakum, R.drawable.kwame_nkrumah, R.drawable.elmina_castle, R.drawable.mole_national_park, R.drawable.cape_coast_castle};
     private final int[] maps = {R.drawable.map_paris, R.drawable.map_seoul, R.drawable.map_london, R.drawable.map_beijing, R.drawable.map_greece};
-    private final int[] descriptions = {R.string.text1, R.string.text2, R.string.text3, R.string.text4, R.string.text5};
+    private final int[] descriptions = {R.string.description_Of_KN_Park, R.string.description_Of_KN_Mausoleum, R.string.description_Of_Elmina_Castle, R.string.description_Of_MN_Park, R.string.description_Of_CapeCoast_Castle};
     private final String[] countries = {"CAPE COAST", "ACCRA", "ELMINA", "TAMALE", "CAPE COAST"};
     private final String[] places = {"Kakum National Park", "Kwame Nkrumah Mausoleum", "Elmina Castle", "Mole National Park", "Cape Coast Castle"};
     private final String[] temperatures = {"21°C", "19°C", "17°C", "23°C", "20°C"};
@@ -346,8 +345,18 @@ public class MainActivity extends AppCompatActivity {
             final int clickedPosition = recyclerView.getChildAdapterPosition(view);
             if (clickedPosition == activeCardPosition) {
 
-                Intent intent = new Intent(MainActivity.this, TourPlacesActivity.class);
-                startActivity(intent);
+                final Intent intent = new Intent(MainActivity.this, IntroSliderDetailsActivity.class);
+                intent.putExtra(IntroSliderDetailsActivity.BUNDLE_IMAGE_ID, pics[activeCardPosition % pics.length]);
+
+                if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
+                    startActivity(intent);
+                } else {
+                    final CardView cardView = (CardView) view;
+                    final View sharedView = cardView.getChildAt(cardView.getChildCount() - 1);
+                    final ActivityOptions options = ActivityOptions
+                            .makeSceneTransitionAnimation(MainActivity.this, sharedView, "shared");
+                    startActivity(intent, options.toBundle());
+                }
 
             } else if (clickedPosition > activeCardPosition) {
                 recyclerView.smoothScrollToPosition(clickedPosition);

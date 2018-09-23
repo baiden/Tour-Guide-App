@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:gravity="center"
+        android:background="@color/dark_grey">
+
+        <ImageView
+            android:id="@+id/descriptionOfPlace_image_view"
+            android:layout_width="@dimen/image_dimens_info"
+            android:layout_height="@dimen/image_dimens_info" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/getAdventurousLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/get_adventurous"
+            android:layout_marginTop="@dimen/rtext_marginTop"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin" />
+
+        <Button
+            android:id="@+id/getAdventurousBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/book_a_trip"
+            android:elevation="@dimen/elevation"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:textColor="@color/white"
+            android:background="@color/colorBlack"
+            android:textSize="@dimen/rbutton_text_size"/>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/reservation_card_view"
+            android:layout_width="@dimen/card_view"
+            android:layout_height="@dimen/card_view"
+            style="@style/PlacesCardView"
+            android:layout_marginLeft="@dimen/card_view_marginLeft"
+            app:cardCornerRadius="@dimen/cardView_cornerRadius"
+            android:layout_below="@id/getAdventurousBtn">
+
+            <RelativeLayout
+                android:id="@+id/tourPlace_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/light_Brown">
+
+                <ImageView
+                    android:id="@+id/reservation_image_view"
+                    android:layout_width="@dimen/card_view_image_view_dimens"
+                    android:layout_height="@dimen/card_view_image_view_dimens"
+                    android:scaleType="centerCrop"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/plans_image"
+                    android:elevation="@dimen/elevation"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/reservations"/>
+
+                <TextView
+                    android:id="@+id/reservation_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/card_view_text_view_marginBottom"
+                    android:textColor="@color/white"
+                    android:text="@string/reservations"
+                    android:layout_below="@id/reservation_image_view"/>
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/toDos_card_view"
+            android:layout_width="@dimen/card_view"
+            android:layout_height="@dimen/card_view"
+            style="@style/PlacesCardView"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/card_view_marginLeft"
+            android:layout_below="@id/getAdventurousBtn"
+            app:cardCornerRadius="@dimen/cardView_cornerRadius">
+
+            <RelativeLayout
+                android:id="@+id/toDo_rlayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/dark_green">
+
+                <ImageView
+                    android:id="@+id/toDo_image_view"
+                    android:layout_width="@dimen/card_view_image_view_dimens"
+                    android:layout_height="@dimen/card_view_image_view_dimens"
+                    android:scaleType="centerCrop"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/plans_image"
+                    android:src="@drawable/selfie"
+                    android:elevation="@dimen/elevation"
+                    android:layout_centerInParent="true"/>
+
+
+                <TextView
+                    android:id="@+id/toDo_image_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/card_view_text_view_marginBottom"
+                    android:textColor="@color/white"
+                    android:text="@string/things_to_do"
+                    android:layout_below="@id/toDo_image_view"/>
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/food_card_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/card_view"
+            style="@style/PlacesCardView"
+            android:layout_below="@id/toDos_card_view"
+            app:cardCornerRadius="@dimen/cardView_cornerRadius">
+
+            <RelativeLayout
+                android:id="@+id/food_rlayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/darker_grey">
+
+                <ImageView
+                    android:id="@+id/food_image_view"
+                    android:layout_width="@dimen/card_view_image_view_dimens"
+                    android:layout_height="@dimen/card_view_image_view_dimens"
+                    android:scaleType="centerCrop"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/plans_image"
+                    android:src="@drawable/food"
+                    android:elevation="@dimen/elevation"
+                    android:layout_centerInParent="true"/>
+
+
+                <TextView
+                    android:id="@+id/food_image_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/card_view_text_view_marginBottom"
+                    android:textColor="@color/white"
+                    android:text="@string/food_and_drinks"
+                    android:layout_below="@id/food_image_view"/>
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -21,15 +21,25 @@
             android:adjustViewBounds="true"
             android:background="@drawable/larabanga_mosque"/>
 
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/upButton_marginTop"
+            android:background="@null"
+            android:contentDescription="@string/backward_button"
+            android:src="@drawable/ic_white_back_arrow_24dp" />
+
         <TextView
             android:id="@+id/nameOfPlaceLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
-            android:layout_marginBottom="16dp"
-            android:layout_marginRight="16dp"
-            android:textColor="#fff"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:textColor="@color/white"
             android:textStyle="bold"/>
 
     </RelativeLayout>
@@ -41,14 +51,14 @@
         android:layout_height="wrap_content"
         style="@style/MyCustomTabLayout"
         android:elevation="@dimen/elevation"
-        android:background="@color/colorBlack"/>
+        android:background="@color/colorBrown"/>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="2"
         android:fillViewport="true"
-        android:background="#eeeeee">
+        android:background="@color/light_grey">
 
         <android.support.v4.view.ViewPager
             android:id="@+id/viewpager"

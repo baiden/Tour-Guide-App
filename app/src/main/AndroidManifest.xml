@@ -18,14 +18,21 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".Activities.IntroSliderDetailsActivity">
+
+        </activity>
+
         <activity android:name=".Activities.TourPlacesActivity">
 
         </activity>
 
-        <activity android:name=".Activities.KakumParkActivity">
+        <activity android:name=".Activities.DetailedManMadeActivity">
 
         </activity>
 
+        <activity android:name=".Activities.DetailedNatureActivity">
+
+        </activity>
 
     </application>
 

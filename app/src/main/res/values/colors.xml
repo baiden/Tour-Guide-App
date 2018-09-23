@@ -4,8 +4,15 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorBlack">#333</color>
+    <color name="colorBrown">#4e342e</color>
 
+    <color name="light_Brown">#8d6e63</color>
     <color name="blue">#348af7</color>
+    <color name="light_grey">#eeeeee</color>
+    <color name="dark_grey">#9e9e9e</color>
+    <color name="white">#fff</color>
+    <color name="darker_grey">#546e7a</color>
+    <color name="dark_green">#26a69a</color>
 
     <color name="temperature_background">@color/blue</color>
     <color name="temperature_text">@android:color/white</color>

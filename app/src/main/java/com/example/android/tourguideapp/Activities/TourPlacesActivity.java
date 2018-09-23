@@ -1,15 +1,23 @@
 package com.example.android.tourguideapp.Activities;
 
+import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
+import android.view.View;
 import android.view.WindowManager;
+import android.widget.ImageButton;
 
 import com.example.android.tourguideapp.R;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class TourPlacesActivity extends FragmentActivity {
+    @BindView(R.id.back_button) ImageButton upButton;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -22,23 +30,34 @@ public class TourPlacesActivity extends FragmentActivity {
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
 
         // Create an adapter that knows which fragment should be shown on each page
-        SimpleFragmentPagerAdapter adapter = new SimpleFragmentPagerAdapter(getSupportFragmentManager());
+        SimpleFragmentPagerAdapter adapter = new SimpleFragmentPagerAdapter(getSupportFragmentManager(), TourPlacesActivity.this);
 
         // Set the adapter onto the view pager
         viewPager.setAdapter(adapter);
 
         // Give the TabLayout the ViewPager
         TabLayout tabLayout = (TabLayout) findViewById(R.id.sliding_tabs);
+        tabLayout.setTabTextColors(Color.parseColor("#727272"), Color.parseColor("#ffffff"));
         tabLayout.setupWithViewPager(viewPager);
 
         // configure icons
-        int[] imageResId = {
+         int[] imageResId = {
                 R.drawable.mud_hut,
-                R.drawable.forest,
-                R.drawable.waterfall};
+                R.drawable.forest};
 
         for (int i = 0; i < imageResId.length; i++) {
             tabLayout.getTabAt(i).setIcon(imageResId[i]);
         }
+
+        ButterKnife.bind(this);
+
+        upButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
     }
+
 }
