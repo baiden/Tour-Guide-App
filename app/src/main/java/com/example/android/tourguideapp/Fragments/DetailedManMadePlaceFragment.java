@@ -48,7 +48,7 @@ public class DetailedManMadePlaceFragment extends Fragment {
         //Receives the data that was passed through the intent
         if (intentThatStartedThisActivity != null) {
             if (intentThatStartedThisActivity.hasExtra(getString(R.string.name_of_place))) {
-                String receiveSongTitle = intentThatStartedThisActivity.getStringExtra(getString(R.string.name_of_place));
+                int receiveSongTitle = intentThatStartedThisActivity.getIntExtra(getString(R.string.name_of_place), R.id.nameOfPlace_text_view);
                 int receiveAlbumImageArt = intentThatStartedThisActivity.getIntExtra(getString(R.string.image_of_place), R.id.singlePlaceImage);
 
                 nameOfPlace_text_view.setText(receiveSongTitle);
