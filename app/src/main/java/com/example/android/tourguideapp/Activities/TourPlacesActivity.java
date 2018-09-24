@@ -38,7 +38,7 @@ public class TourPlacesActivity extends FragmentActivity {
 
         // Give the TabLayout the ViewPager
         TabLayout tabLayout = (TabLayout) findViewById(R.id.sliding_tabs);
-        tabLayout.setTabTextColors(Color.parseColor("#727272"), Color.parseColor("#ffffff"));
+        tabLayout.setTabTextColors(Color.parseColor(getString(R.string.color_of_inactive_tab_text)), Color.parseColor(getString(R.string.color_white)));
         tabLayout.setupWithViewPager(viewPager);
 
         // configure icons

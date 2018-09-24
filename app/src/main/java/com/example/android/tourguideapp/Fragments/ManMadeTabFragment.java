@@ -34,11 +34,11 @@ public class ManMadeTabFragment extends Fragment {
         // Create a list of words
         final ArrayList<PlaceData> tourSideAttractionData = new ArrayList<PlaceData>();
 
-        tourSideAttractionData.add(new PlaceData("Kwame Nkrumah Mausoleum", R.drawable.kwame_nkrumah));
-        tourSideAttractionData.add(new PlaceData("Independence Arc", R.drawable.independence_arc));
-        tourSideAttractionData.add(new PlaceData("Cape Coast Castle", R.drawable.cape_coast_castle));
-        tourSideAttractionData.add(new PlaceData("National Museum of Ghana", R.drawable.national_museum_of_ghana));
-        tourSideAttractionData.add(new PlaceData("Elmina Castle", R.drawable.elmina_castle));
+        tourSideAttractionData.add(new PlaceData(R.string.KN_Mausoleum, R.drawable.kwame_nkrumah));
+        tourSideAttractionData.add(new PlaceData(R.string.Independence_Arc, R.drawable.independence_arc));
+        tourSideAttractionData.add(new PlaceData(R.string.CapeCoast_Castle, R.drawable.cape_coast_castle));
+        tourSideAttractionData.add(new PlaceData(R.string.NMuseum_ofGhana, R.drawable.national_museum_of_ghana));
+        tourSideAttractionData.add(new PlaceData(R.string.Elmina_Castle, R.drawable.elmina_castle));
 
         //Puts the values into the TourSideAttractionAdapter class
         TourSideAttractionAdapter tourSideAttractionAdapter = new TourSideAttractionAdapter(getActivity(), tourSideAttractionData);
@@ -54,8 +54,8 @@ public class ManMadeTabFragment extends Fragment {
                 Intent playtrack = new Intent(getContext(), DetailedManMadeActivity.class);
                 PlaceData sideAttractionData = tourSideAttractionData.get(position);
 
-                playtrack.putExtra("NameOfPlace",sideAttractionData.getNameOfPlace());
-                playtrack.putExtra("ImageOfPlace", sideAttractionData.getImageOfPlaceResourceID());
+                playtrack.putExtra(getString(R.string.name_of_place),sideAttractionData.getNameOfPlace());
+                playtrack.putExtra(getString(R.string.image_of_place), sideAttractionData.getImageOfPlaceResourceID());
                 startActivity(playtrack);
             }
         });

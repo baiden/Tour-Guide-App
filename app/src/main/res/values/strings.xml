@@ -15,6 +15,11 @@
     <string name="Elmina_Castle">Elmina Castle</string>
     <string name="MN_Park">Mole National Park</string>
     <string name="CapeCoast_Castle">Cape Coast Castle</string>
+    <string name="DN_Park">Digya National Park</string>
+    <string name="SH_Resource_Reserve">Shai Hills Resource Reserve</string>
+    <string name="Mountain_Afadjato">Mountain Afadjato</string>
+    <string name="Independence_Arc">Independence Arc</string>
+    <string name="NMuseum_ofGhana">National Museum of Ghana</string>
 
     <string name="explore">Explore</string>
     <string name="get_adventurous">Get adventurous!</string>
@@ -26,6 +31,10 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="backward_button">Backward button</string>
+    <string name="name_of_place">NameOfPlace</string>
+    <string name="image_of_place">ImageOfPlace</string>
+    <string name="color_of_inactive_tab_text">#727272</string>
+    <string name="color_white">#ffffff</string>
 
 
 </resources>

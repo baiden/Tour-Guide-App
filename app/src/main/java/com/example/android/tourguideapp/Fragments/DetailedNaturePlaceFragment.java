@@ -40,16 +40,16 @@ public class DetailedNaturePlaceFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_man_made, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_place_detailed_information, container, false);
         ButterKnife.bind(this, rootView);
 
         Intent intentThatStartedThisActivity = getActivity().getIntent();
 
         //Receives the data that was passed through the intent
         if (intentThatStartedThisActivity != null) {
-            if (intentThatStartedThisActivity.hasExtra("NameOfPlace")) {
-                String receiveSongTitle = intentThatStartedThisActivity.getStringExtra("NameOfPlace");
-                int receiveAlbumImageArt = intentThatStartedThisActivity.getIntExtra("ImageOfPlace", R.id.singlePlaceImage);
+            if (intentThatStartedThisActivity.hasExtra(getString(R.string.name_of_place))) {
+                String receiveSongTitle = intentThatStartedThisActivity.getStringExtra(getString(R.string.name_of_place));
+                int receiveAlbumImageArt = intentThatStartedThisActivity.getIntExtra(getString(R.string.image_of_place), R.id.singlePlaceImage);
 
                 nameOfPlace_text_view.setText(receiveSongTitle);
                 imageOfPlace_image_view.setImageResource(receiveAlbumImageArt);
