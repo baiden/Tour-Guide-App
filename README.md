@@ -8,7 +8,6 @@ Create a Tour Guide App which presents relevant information to a user who’s vi
 
 <a href="https://imgflip.com/gif/2m7bbp"><img src="https://i.imgflip.com/2m7bbp.gif" title="made at imgflip.com"/></a>
 <a href="https://imgflip.com/gif/2m7bdt"><img src="https://i.imgflip.com/2m7bdt.gif" title="made at imgflip.com"/></a>
-<a href="https://imgflip.com/gif/2m7bf1"><img src="https://i.imgflip.com/2m7bf1.gif" title="made at imgflip.com"/></a>
 
 **Hint:** If you encounter an installation error, Click Build tab ---> Clean Project ---> Run it again :)
 
