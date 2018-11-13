@@ -7,7 +7,7 @@ Create a Tour Guide App which presents relevant information to a user who’s vi
 **Tour Guide App** is a simple tour app that presents relevant information as to places to visit to a user who’s visiting Ghana for the first time.
 
 <a href="https://imgflip.com/gif/2mgy3t"><img src="https://i.imgflip.com/2mgy3t.gif" title="made at imgflip.com"/></a>
-<a href="https://imgflip.com/gif/2m7bdt"><img src="https://i.imgflip.com/2m7bdt.gif" title="made at imgflip.com"/></a>
+<a href="https://imgflip.com/gif/2mh13e"><img src="https://i.imgflip.com/2mh13e.gif" title="made at imgflip.com"/></a>
 
 **Hint:** If you encounter an installation error, Click Build tab ---> Clean Project ---> Run it again :)
 
